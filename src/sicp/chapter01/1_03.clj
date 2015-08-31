@@ -2,7 +2,8 @@
 
 (defn solution
   [a b c]
-  (letfn [(square [x] (* x x))]
+  (letfn [(square [x]
+            (* x x))]
     (+ (square (max a
                     b))
        (square (max b
