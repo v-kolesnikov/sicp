@@ -4,4 +4,4 @@
             [sicp.chapter01.1-02 :refer :all]))
 
 (deftest test-asserts
-  (assert-equal solution (- 37/150)))
+  (assert-equal -37/150 solution))
