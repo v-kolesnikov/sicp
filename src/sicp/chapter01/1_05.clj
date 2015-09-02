@@ -4,8 +4,9 @@
   (p))
 
 (defn test-eval-order [x y]
-  (if (= x 0)
+  (if (zero? x)
     0
     y))
 
-(test-eval-order 0 (p))
+; The following code should throw an exception
+; (test-eval-order 0 (p))
