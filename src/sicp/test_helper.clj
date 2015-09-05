@@ -4,3 +4,7 @@
 (defn assert-equal
   [expected actual]
   (is (= expected actual)))
+
+(defn assert_is
+  [actual]
+  (is actual))
