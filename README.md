@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/justCxx/sicp.svg)](https://travis-ci.org/justCxx/sicp)
+[![Licence MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://opensource.org/licenses/MIT)
 
 SICP
 ====
