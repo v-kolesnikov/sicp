@@ -24,5 +24,3 @@
                    p
                    q
                    (dec count)))))
-
-(fib 20)
