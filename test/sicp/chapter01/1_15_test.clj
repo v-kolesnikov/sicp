@@ -4,6 +4,6 @@
             [sicp.chapter01.1-15 :refer :all]))
 
 (deftest test-sine
-  (assert_is (< (Math/abs (- (Math/sin 12.15)
+  (assert-is (< (Math/abs (- (Math/sin 12.15)
                              (sicp.chapter01.1-15/sine 12.15)))
                 0.1)))
