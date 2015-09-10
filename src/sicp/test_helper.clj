@@ -5,6 +5,6 @@
   [expected actual]
   (is (= expected actual)))
 
-(defn assert_is
+(defn assert-is
   [actual]
   (is actual))
