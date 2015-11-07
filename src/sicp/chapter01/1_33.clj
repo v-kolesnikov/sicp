@@ -1,6 +1,5 @@
 (ns sicp.chapter01.1-33
-  (:require [sicp.chapter01.1-21 :refer [prime?]]
-            [sicp.chapter01.1-20 :refer [gcd]]
+  (:require [sicp.chapter01.1-20 :refer [gcd]]
             [sicp.chapter01.1-21 :refer [prime?]]
             [sicp.common :refer [square]]))
 
