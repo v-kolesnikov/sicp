@@ -3,7 +3,7 @@
             [sicp.test-helper :refer :all]
             [sicp.chapter01.1-19 :refer :all]))
 
-(deftest test-fast-expt
+(deftest test-fib
   (assert-equal 0 (fib 0))
   (assert-equal 1 (fib 1))
   (assert-equal 1 (fib 2))

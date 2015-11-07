@@ -3,7 +3,7 @@
             [sicp.test-helper :refer :all]
             [sicp.chapter01.1-12 :refer :all]))
 
-(deftest test-pascal-triangle-row
+(deftest test-pascal-triangle
   (assert-equal 1 (pascal-triangle-element 0 0))
   (assert-equal 1 (pascal-triangle-element 1 0))
   (assert-equal 1 (pascal-triangle-element 1 1))
