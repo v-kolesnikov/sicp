@@ -11,11 +11,12 @@
 
 (defn accumulate
   [combiner null-value term a next-term b]
-  (letfn [(iter [a acc]
-            (if (> a b)
-              acc
-              (iter (next-term a) (combiner acc (term a)))))]
-    (iter a null-value)))
+  (loop [a a
+         acc null-value]
+    (if (> a b)
+      acc
+      (recur (next-term a)
+             (combiner acc (term a))))))
 
 (defn sum
   [a b]
