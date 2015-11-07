@@ -1,6 +1,3 @@
-generate: format
-	lein run
-
 format:
 	lein cljfmt fix
 
