@@ -4,8 +4,8 @@
 (defn repeated
   [f n]
   (loop [g f
-         k n]
-    (if (= k 1)
-      g
+         k (dec n)]
+    (if (pos? k)
       (recur (compose f g)
-             (dec k)))))
+             (dec k))
+      g)))
