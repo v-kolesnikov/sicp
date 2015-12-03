@@ -4,6 +4,8 @@
 SICP
 ====
 
+[![Join the chat at https://gitter.im/justCxx/sicp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/justCxx/sicp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ![SICP](https://cloud.githubusercontent.com/assets/6506296/9565373/43d6ad60-4ed4-11e5-85bb-342aa1b562a3.jpg)
 
 
