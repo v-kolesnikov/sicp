@@ -2,9 +2,7 @@
 
 (defn solution
   [a b c]
-  (letfn [(square [x]
-            (* x x))]
-    (+ (square (max a
-                    b))
-       (square (max b
-                    c)))))
+  (let [square (fn [x] (* x x))
+        peaks (take-last 2 (sort [a b c]))]
+    (+ (square (first peaks))
+       (square (second peaks)))))
