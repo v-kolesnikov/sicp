@@ -2,8 +2,9 @@
 
 (defn sum
   [term a next-element b]
-  (letfn [(iter [a acc]
-            (if (> a b)
-              acc
-              (iter (next-element a) (+ acc (term a)))))]
-    (iter a 0)))
+  (loop [i a
+         acc 0]
+    (if (> i b)
+      acc
+      (recur (next-element i)
+             (+ acc (term i))))))
