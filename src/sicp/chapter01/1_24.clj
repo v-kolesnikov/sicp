@@ -1,5 +1,5 @@
 (ns sicp.chapter01.1-24
-  (:require [sicp.common :refer [avg square]]))
+  (:require [sicp.common :refer [square]]))
 
 (defn expmod
   [base exp m]

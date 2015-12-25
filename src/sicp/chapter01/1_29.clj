@@ -1,6 +1,5 @@
 (ns sicp.chapter01.1-29
-  (:require [sicp.chapter01.1-30 :refer [sum]]
-            [sicp.common :refer [cube]]))
+  (:require [sicp.chapter01.1-30 :refer [sum]]))
 
 (defn integral
   [f a b dx]

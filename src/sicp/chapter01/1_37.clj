@@ -1,5 +1,4 @@
-(ns sicp.chapter01.1-37
-  (:require [sicp.common :refer [avg]]))
+(ns sicp.chapter01.1-37)
 
 (defn cont-frac-recursive
   [n d k]

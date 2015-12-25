@@ -1,5 +1,4 @@
-(ns sicp.chapter01.1-20
-  (:require [sicp.common :refer [square]]))
+(ns sicp.chapter01.1-20)
 
 (defn gcd
   [a b]

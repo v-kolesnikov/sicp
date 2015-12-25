@@ -1,6 +1,5 @@
 (ns sicp.chapter01.1-40
-  (:require [sicp.common :refer [avg]]
-            [sicp.chapter01.1-35 :refer [fixed-point]]))
+  (:require [sicp.chapter01.1-35 :refer [fixed-point]]))
 
 (defn deriv
   [g]
