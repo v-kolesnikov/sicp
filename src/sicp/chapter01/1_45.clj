@@ -1,9 +1,8 @@
 (ns sicp.chapter01.1-45
-  (:require [sicp.common :refer [avg]])
-  (:require [sicp.chapter01.1-16 :refer [fast-expt]])
-  (:require [sicp.chapter01.1-35 :refer [fixed-point]])
-  (:require [sicp.chapter01.1-36 :refer [average-damp]])
-  (:require [sicp.chapter01.1-43 :refer [repeated]]))
+  (:require [sicp.chapter01.1-16 :refer [fast-expt]]
+            [sicp.chapter01.1-35 :refer [fixed-point]]
+            [sicp.chapter01.1-36 :refer [average-damp]]
+            [sicp.chapter01.1-43 :refer [repeated]]))
 
 (defn nth-root
   [x n]

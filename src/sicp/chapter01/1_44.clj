@@ -1,6 +1,6 @@
 (ns sicp.chapter01.1-44
-  (:require [sicp.common :refer [avg]]
-            [sicp.chapter01.1-43 :refer [repeated]]))
+  (:require [sicp.chapter01.1-43 :refer [repeated]]
+            [sicp.common :refer [avg]]))
 
 (defn smooth
   [f dx]
