@@ -25,3 +25,12 @@
     (/ (Math/floor (* d
                       factor))
        factor)))
+
+(defn error?
+  [x]
+  (true? (:error x)))
+
+(defn error
+  [message]
+  {:error true
+   :message message})
