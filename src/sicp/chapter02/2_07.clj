@@ -1,4 +1,5 @@
-(ns sicp.chapter02.2-07)
+(ns sicp.chapter02.2-07
+  (:require [clojure.test.check.generators :as gen]))
 
 (defn make-interval
   [a b]
@@ -32,3 +33,7 @@
   (mul-interval a
                 (make-interval (/ 1.0 (upper-bound b))
                                (/ 1.0 (lower-bound b)))))
+
+(def gen-interval
+  (gen/fmap #(apply make-interval (sort %))
+            (gen/tuple gen/int gen/int)))
