@@ -17,5 +17,5 @@
       (sicp-2-07/mul-interval a inverse-b))))
 
 (def gen-zero-contains-interval
-  (gen/such-that #(contains 0 %)
-                 sicp-2-07/gen-interval))
+  (gen/fmap #(apply sicp-2-07/make-interval %)
+            (gen/tuple gen/s-neg-int gen/s-pos-int)))
