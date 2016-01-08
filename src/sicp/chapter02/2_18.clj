@@ -7,4 +7,4 @@
     (if (empty? s)
       acc
       (recur (rest s)
-             (conj acc (first s))))))
+             (cons (first s) acc)))))
