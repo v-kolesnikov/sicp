@@ -8,4 +8,5 @@
   20
   (prop/for-all [v (gen/not-empty (gen/list gen/int))]
                 (= (sicp-2-21/square-list-v1 v)
-                   (sicp-2-21/square-list-v2 v))))
+                   (sicp-2-21/square-list-v2 v)
+                   (sicp-2-21/square-list-v3 v))))
