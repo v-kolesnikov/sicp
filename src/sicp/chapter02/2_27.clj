@@ -16,5 +16,3 @@
   (if (list? coll)
     (map deep-reverse-v2 (sicp-2-18/reverse coll))
     coll))
-
-(deep-reverse-v1 '(1 2 (3 4) 5))
