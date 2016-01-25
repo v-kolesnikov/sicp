@@ -34,3 +34,10 @@
   [message]
   {:error true
    :message message})
+
+; sicp 2.2.3
+(defn accumulate [op initial sequence]
+  (if (empty? sequence)
+    initial
+    (op (first sequence)
+        (accumulate op initial (rest sequence)))))
