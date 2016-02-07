@@ -5,7 +5,7 @@
   [painter n]
   (if (zero? n)
     painter
-    (let [smaller (right-split painter (dec n))]
+    (let [smaller (up-split- painter (dec n))]
       (->> smaller
            (pl/beside smaller)
            (pl/below painter)))))
