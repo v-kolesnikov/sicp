@@ -27,6 +27,6 @@
   (assert-equal [-35 -105] (sicp-2-46/sub-vect [-50 -10] [-15 95])))
 
 (deftest test-scale-vect
-  (assert-equal [0 0] (sicp-2-46/scale-vect [0 0] 1))
-  (assert-equal [3.75 2.25] (sicp-2-46/scale-vect [2.5 1.5] 1.5))
-  (assert-equal [100 20] (sicp-2-46/scale-vect [-50 -10] -2)))
+  (assert-equal [0 0] (sicp-2-46/scale-vect 1 [0 0]))
+  (assert-equal [3.75 2.25] (sicp-2-46/scale-vect 1.5 [2.5 1.5]))
+  (assert-equal [100 20] (sicp-2-46/scale-vect -2 [-50 -10])))

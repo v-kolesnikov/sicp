@@ -24,7 +24,7 @@
              (- y1 y2)))
 
 (defn scale-vect
-  [[x y] s]
+  [s [x y]]
   {:pre [(number? s)]}
   (make-vect (* x s)
              (* y s)))
