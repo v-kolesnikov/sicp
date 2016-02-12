@@ -1,19 +1,34 @@
-(ns sicp.chapter02.2-44
-  (:require [sicp.chapter02.picture-language.core :as pl]))
+(ns sicp.chapter02.2-44)
 
-(defn up-split-
+(defn below
+  [bottom-painter top-painter]
+  ; some thiings
+  (fn [frame]
+    ; draw bottom-painter
+    ; draw top-painter
+    nil))
+
+(defn beside
+  [left-painter right-painter]
+  ; some thiings
+  (fn [frame]
+    ; draw left-painter
+    ; draw right-painter
+    nil))
+
+(defn up-split-v1
   [painter n]
   (if (zero? n)
     painter
-    (let [smaller (up-split- painter (dec n))]
+    (let [smaller (up-split-v1 painter (dec n))]
       (->> smaller
-           (pl/beside smaller)
-           (pl/below painter)))))
+           (beside smaller)
+           (below painter)))))
 
-(defn up-split
+(defn up-split-v2
   [painter n]
-  (reduce #(->> %1
-                (pl/beside %1)
-                (pl/below painter))
-          painter
-          (range 0 n)))
+  (let [f (fn [p _]
+            (->> p
+                 (beside p)
+                 (below painter)))]
+    (reduce f painter (range 0 n))))
