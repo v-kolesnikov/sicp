@@ -1,6 +1,6 @@
 (ns sicp.chapter02.2-48-test
   (:require [clojure.test :refer [deftest]]
-            [sicp.chapter02.2-02 :as sicp-2-48]
+            [sicp.chapter02.2-48 :as sicp-2-48]
             [sicp.test-helper :refer [assert-equal]]))
 
 (deftest test-make-segment

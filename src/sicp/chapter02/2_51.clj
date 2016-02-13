@@ -11,13 +11,13 @@
                                       (make-vect 0.0 0.0)
                                       split-point
                                       (make-vect 0.0 1.0))
-        paint-right (transform-painter left-painter
+        paint-right (transform-painter right-painter
                                        split-point
                                        (make-vect 1.0 0.0)
                                        (make-vect 0.5 1.0))]
     (fn [frame]
-      [(paint-left frame)
-       (paint-right frame)])))
+      (paint-left frame)
+      (paint-right frame))))
 
 (defn below
   [bottom-painter top-painter]
@@ -31,8 +31,8 @@
                                      (make-vect 1.0 0.5)
                                      (make-vect 0.0 1.0))]
     (fn [frame]
-      [(paint-bottom frame)
-       (paint-top frame)])))
+      (paint-bottom frame)
+      (paint-top frame))))
 
 (defn below-rotate
   [bottom-painter top-painter]
