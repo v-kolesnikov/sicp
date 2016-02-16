@@ -1,4 +1,5 @@
-(ns sicp.chapter01.1-31)
+(ns sicp.chapter01.1-31
+  (:require [sicp.common :as sicp]))
 
 (defn product-recursive
   [term a next-element b]
@@ -10,13 +11,16 @@
                           next-element
                           b))))
 
-(defn product
+(defn product-iterative
   [term a next-term b]
-  (letfn [(iter [a acc]
-            (if (> a b)
-              acc
-              (iter (next-term a) (* acc (term a)))))]
-    (iter a 1)))
+  (loop [i a
+         acc 1]
+    (if (> i b)
+      acc
+      (recur (next-term i)
+             (* acc (term i))))))
+
+(def product product-iterative)
 
 (defn factorial
   [n]
@@ -24,11 +28,12 @@
 
 (defn wallis-range
   [n]
-  (float (product #(/ (* (dec %) (inc %)) (* % %)) 3 #(+ 2 %) n)))
+  (let [a 3
+        term (fn [x]
+               (/ (dec (sicp/square x))
+                  (sicp/square x)))
+        next (fn [x] (+ x 2))]
+    (float (product term a next n))))
 
-(defn pi
-  ([]
-   (pi 1111))
-  ([n]
-   (* 4
-      (wallis-range n))))
+(defn pi [n]
+  (* 4 (wallis-range n)))
