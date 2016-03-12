@@ -36,28 +36,28 @@
   (assert-equal '(1 2 3 1 2 1 2) (sicp-2-60/union-set '(1 2 3 1 2) '(1 2)))
   (assert-equal '(1 2 3 4 (1) (2) 3) (sicp-2-60/union-set '(1 2 3 4) '((1) (2) 3))))
 
-(def element-of-set
+(def element-of-set-generator
   (gen/one-of [gen/int gen/char-ascii]))
 
 (def set-generator
-  (gen/list-distinct element-of-set))
+  (gen/list-distinct element-of-set-generator))
 
 (defspec spec-set1
   20
   (prop/for-all [s set-generator
-                 x element-of-set]
+                 x element-of-set-generator]
                 (sicp-2-60/element-of-set? x (sicp-2-60/adjoin-set x s))))
 
 (defspec spec-set2
   20
   (prop/for-all [s1 set-generator
                  s2 set-generator
-                 x element-of-set]
+                 x element-of-set-generator]
                 (= (sicp-2-60/element-of-set? x (sicp-2-60/union-set s1 s2))
                    (or (sicp-2-60/element-of-set? x s1)
                        (sicp-2-60/element-of-set? x s2)))))
 
 (defspec spec-set3
   20
-  (prop/for-all [x element-of-set]
+  (prop/for-all [x element-of-set-generator]
                 (not (sicp-2-60/element-of-set? x '()))))
