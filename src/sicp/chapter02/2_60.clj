@@ -11,15 +11,18 @@
   [x s]
   (cons x s))
 
-(defn intersection-set
+(defn intersection-set-canonical
   [set1 set2]
-  (loop [[fs & rs :as s1] set1
-         s2 set2
+  (loop [[x & xs :as s1] set1
          acc '()]
     (cond
-      (or (empty? s1) (empty? s2)) (reverse acc)
-      (element-of-set? fs s2) (recur rs s2 (cons fs acc))
-      :else (recur rs s2 acc))))
+      (or (empty? s1) (empty? set2)) (reverse acc)
+      (element-of-set? x set2) (recur xs (cons x acc))
+      :else (recur xs acc))))
+
+(defn intersection-set-functional
+  [set1 set2]
+  (filter #(element-of-set? % set2) set1))
 
 (defn union-set
   [set1 set2]
