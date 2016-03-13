@@ -1,0 +1,15 @@
+- name: add repository
+  apt_repository: repo={{ java_ppa }} state=present
+  become: yes
+
+- name: accept licence
+  debconf:
+    name: "{{ java_package_name }}"
+    question: "shared/accepted-oracle-license-v1-1"
+    value: "true"
+    vtype: "select"
+  become: yes
+
+- name: install package
+  apt: name="{{ java_package_name }}" state=present
+  become: yes
