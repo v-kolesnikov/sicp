@@ -15,20 +15,19 @@
   [a b]
   (loop [a (Math/abs a)
          b (Math/abs b)]
-    (if (zero? b) a,
+    (if (zero? b) a
         (recur b (mod a b)))))
 
 (defn round
   "Round down a double to the given precision (number of significant digits)"
   [d precision]
   (let [factor (Math/pow 10 precision)]
-    (/ (Math/floor (* d
-                      factor))
+    (/ (Math/floor (* d factor))
        factor)))
 
 (defn error?
-  [x]
-  (true? (:error x)))
+  [{e :error}]
+  (true? e))
 
 (defn error
   [message]
