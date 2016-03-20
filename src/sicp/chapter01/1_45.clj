@@ -6,10 +6,7 @@
 
 (defn nth-root
   [x n]
-  (let [damps (Math/ceil (dec (/ (Math/log (inc n))
-                                 (Math/log 2))))
-        nth-average (repeated average-damp
-                              damps)
-        transform #(/ x (fast-expt % (dec n)))]
-    (fixed-point (nth-average transform)
-                 1.0)))
+  (let [damp-count (-> n inc Math/log (/ (Math/log 2)) dec Math/ceil)
+        nth-damp (repeated average-damp damp-count)
+        transform #(->> n dec (fast-expt %) (/ x))]
+    (fixed-point (nth-damp transform) 1.0)))

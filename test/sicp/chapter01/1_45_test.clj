@@ -1,9 +1,9 @@
 (ns sicp.chapter01.1-45-test
   (:require [clojure.test :refer :all]
-            [sicp.test-helper :refer :all]
-            [sicp.chapter01.1-45 :refer :all]))
+            [sicp.chapter01.1-45 :refer :all]
+            [sicp.test-helper :refer :all]))
 
-(deftest test-repeated
+(deftest test-nth-root
   (assert-equal 3.0 (nth-root 81 4))
   (assert-equal 2.0 (nth-root 256 8))
   (assert-equal 2.0 (nth-root 4294967296 32))
