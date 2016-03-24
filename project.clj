@@ -4,12 +4,12 @@
   :license {:name "MIT"
             :url "https://opensource.org/licenses/MIT"}
   :plugins [[lein-kibit "0.1.2"]
-            [lein-cljfmt "0.3.0"]
+            [lein-cljfmt "0.4.1"]
             [lein-gen "0.2.1"]
             [jonase/eastwood "0.2.2"]]
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/test.check "0.9.0"]
-                 [quil "2.3.0"]]
+                 [quil "2.4.0"]]
   :generators [[sicp-generator "0.1.2"]]
   :main ^:skip-aot sicp.core
   :target-path "target/%s"
