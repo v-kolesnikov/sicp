@@ -9,9 +9,11 @@
 (defn accumulate-n-v2
   [op init seqs]
   (loop [colls seqs
-         acc (list)]
-    (if (seq (first colls))
-      (recur (map rest colls)
-             (cons (reduce op init (map first colls))
-                   acc))
+         acc '()]
+    (if (-> colls first seq)
+      (let [heads (map first colls)
+            tails (map rest  colls)]
+        (recur tails
+               (cons (reduce op init heads)
+                     acc)))
       (reverse acc))))
