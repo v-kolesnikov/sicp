@@ -2,9 +2,7 @@
 
 (defn last-pair
   [coll]
-  (loop [head coll
-         tail (rest coll)]
+  (loop [[head & tail] coll]
     (if (empty? tail)
-      head
-      (recur tail
-             (rest tail)))))
+      (list head)
+      (recur tail))))
