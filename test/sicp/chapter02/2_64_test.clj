@@ -1,8 +1,13 @@
 (ns sicp.chapter02.2-64-test
   (:require [clojure.test :refer [deftest]]
             [sicp.chapter02.2-64 :as sicp-2-64]
-            [sicp.test-helper :refer [assert-equal]]))
+            [sicp.extra.graph.viz :as v]
+            [sicp.test-helper :refer :all]))
 
 (deftest test-partial-tree
   (assert-equal '(5 (1 () (3 () ())) (9 (7 () ()) (11 () ())))
                 (sicp-2-64/list->tree '(1 3 5 7 9 11))))
+
+(deftest test-draw-tree
+  (let [tree (sicp-2-64/list->tree '(1 3 5 7 9 11))]
+    (assert-true (v/render-image :simple tree "target/2_64_test.png"))))
