@@ -9,6 +9,7 @@
             [jonase/eastwood "0.2.2"]]
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/test.check "0.9.0"]
+                 [rhizome "0.2.5"]
                  [quil "2.4.0"]]
   :generators [[sicp-generator "0.1.2"]]
   :main ^:skip-aot sicp.core
