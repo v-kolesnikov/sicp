@@ -1,3 +1,9 @@
+test:
+	lein trampoline test
+
+grapviz:
+	lein run -m sicp.extra.graph.render-all
+
 format:
 	lein cljfmt fix
 
@@ -11,8 +17,5 @@ check-style:
 
 check-namespaces:
 	lein eastwood
-
-test:
-	lein trampoline test
 
 .PHONY: test
