@@ -1,5 +1,5 @@
 Vagrant.configure(VAGRANT_API_VERSION = 2) do |config|
-  config.vm.box = 'ubuntu/trusty64'
+  config.vm.box = 'ubuntu/xenial64'
   config.vm.box_check_update = false
 
   config.ssh.forward_agent = true
