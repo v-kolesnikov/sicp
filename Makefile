@@ -1,6 +1,12 @@
 test:
 	lein trampoline test
 
+docker-build:
+	docker build -t sicp .
+
+docker-test: docker-build
+	docker run -v $(CURDIR):/sicp sicp /bin/bash -c 'cd /sicp && lein trampoline test'
+
 grapviz:
 	lein run -m sicp.extra.graph.render-all
 
