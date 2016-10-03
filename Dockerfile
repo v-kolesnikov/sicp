@@ -1,5 +1,11 @@
-from clojure
+from clojure:lein-2.7.1
+MAINTAINER Vasily Kolesnikov re.vkolesnikov@gmail.com
 
-ADD project.clj /app/project.clj
-WORKDIR /app
+ENV APP_HOME /sicp
+WORKDIR /sicp
+
+ADD project.clj $APP_HOME/project.clj
 RUN lein deps
+
+USER root
+CMD bash

@@ -1,11 +1,9 @@
-test:
-	lein trampoline test
+APP_HOME := '/sicp'
+TAG := v-kolesnikov/sicp
+TEST_COMMAND := lein trampoline test
+REPL_PORT := 48789
 
-docker-build:
-	docker build -t sicp .
-
-docker-test: docker-build
-	docker run -v $(CURDIR):/sicp sicp /bin/bash -c 'cd /sicp && lein trampoline test'
+include docker.mk
 
 grapviz:
 	lein run -m sicp.extra.graph.render-all
