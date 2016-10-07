@@ -1,6 +1,7 @@
-(ns sicp.chapter02.2-05)
+(ns sicp.chapter02.2-05
+  (:refer-clojure :exclude [cons]))
 
-(defn cons-
+(defn cons
   [a b]
   (* (Math/pow 2 a)
      (Math/pow 3 b)))
