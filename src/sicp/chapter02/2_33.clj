@@ -1,4 +1,5 @@
-(ns sicp.chapter02.2-33)
+(ns sicp.chapter02.2-33
+  (:refer-clojure :exclude [map]))
 
 (defn map
   [f coll]
