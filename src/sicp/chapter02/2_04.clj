@@ -1,6 +1,7 @@
-(ns sicp.chapter02.2-04)
+(ns sicp.chapter02.2-04
+  (:refer-clojure :exclude [cons]))
 
-(defn my-cons
+(defn cons
   [x y]
   (fn [m] (m x y)))
 

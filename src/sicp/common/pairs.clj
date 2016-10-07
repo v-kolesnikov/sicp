@@ -1,4 +1,5 @@
 (ns sicp.common.pairs
+  (:refer-clojure :exclude [cons])
   (:require [clojure.test :as test]))
 
 (defn car [z]

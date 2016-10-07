@@ -1,4 +1,5 @@
-(ns sicp.chapter02.2-18)
+(ns sicp.chapter02.2-18
+  (:refer-clojure :exclude [reverse]))
 
 (defn reverse
   [coll]
