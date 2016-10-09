@@ -1,15 +1,24 @@
 (ns sicp.common.pairs
-  (:refer-clojure :exclude [cons])
-  (:require [clojure.test :as test]))
+  "Pairs implementation from SICP section 2.1"
+  {:author "Vasily Kolesnikov"}
+  (:refer-clojure :exclude [cons]))
 
-(defn car [z]
-  (z (fn [p q] p)))
+(defn car [[x _]] x)
+(defn cdr [[_ y]] y)
 
-(defn cdr [z]
-  (z (fn [p q] q)))
+(defn cons [x y] (list x y))
 
-(defn cons
-  [x y]
-  (fn [m] (m x y)))
+(defn pair?
+  [data]
+  (and (list? data)
+       (= (count data) 2)))
 
-(def pair? test/function?)
+(defn inspect
+  [pair]
+  (if-not (pair? pair)
+    pair
+    (let [head (car pair)
+          tail (cdr pair)]
+      (format "(%s, %s)"
+              (inspect head)
+              (inspect tail)))))

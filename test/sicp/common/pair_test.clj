@@ -13,5 +13,9 @@
 
 (deftest pair?-test
   (assert-true  (p/pair? (p/cons 3 8)))
-  (assert-false (p/pair? '(1, 2)))
   (assert-false (p/pair? [1, 2])))
+
+(deftest test-inspect
+  (assert-equal "(10, ((2, 5), 1))" (p/inspect (p/cons 10 (p/cons (p/cons 2 5) 1))))
+  (assert-equal "((1 2 3), [4 5])" (p/inspect (p/cons '(1 2 3) '[4 5])))
+  (assert-equal "(10, (foo, :bar))" (p/inspect (p/cons 10 (p/cons 'foo :bar)))))
