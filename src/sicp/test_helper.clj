@@ -2,13 +2,13 @@
   (:require [clojure.test :refer [is]]))
 
 (defmacro assert-equal
-  ([expected actual] `(assert-equal ~expected ~actual nil))
-  ([expected actual msg] `(is (= ~expected ~actual) ~msg)))
+  [expected actual ]
+  `(assert-true (= ~expected ~actual)))
 
 (defmacro assert-true
-  ([expr] `(assert-true ~expr nil))
-  ([expr msg] `(is ~expr ~msg)))
+  [expr]
+  `(is ~expr))
 
 (defmacro assert-false
-  ([expr] `(assert-false ~expr nil))
-  ([expr msg] `(assert-true (not ~expr) ~msg)))
+  [expr]
+  `(assert-true (not ~expr)))
