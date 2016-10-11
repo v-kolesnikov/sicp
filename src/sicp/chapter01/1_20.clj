@@ -4,5 +4,5 @@
   [a b]
   (loop [a (Math/abs a)
          b (Math/abs b)]
-    (if (zero? b) a,
+    (if (zero? b) a
         (recur b (mod a b)))))

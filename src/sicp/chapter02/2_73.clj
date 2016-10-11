@@ -1,7 +1,8 @@
 (ns sicp.chapter02.2-73
   (:require [sicp.chapter02.2-56 :refer [make-exponentiation make-product
                                          make-sum same-variable? variable?]]
-            [sicp.common :as sicp]))
+            [sicp.common :as sicp])
+  (:refer-clojure :exclude [get]))
 
 (defn install-package-deriv []
   (defmulti get (fn [method operator]
