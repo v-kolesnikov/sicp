@@ -11,12 +11,21 @@
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
              :dev [:project/dev :profiles/dev]
-             :project/dev {:dependencies [[slamhound "1.5.5"]]
+             :project/dev {:dependencies
+                           [[cljfmt "0.5.7"
+                             slamhound "1.5.5"]]
                            :generators [[sicp-generator "0.1.2"]]
-                           :plugins [[lein-kibit "0.1.2"]
-                                     [lein-cljfmt "0.5.3"]
-                                     [lein-gen "0.2.1"]
-                                     [jonase/eastwood "0.2.3"]]
-                           :aliases {"slamhound" ["run" "-m" "slam.hound"]}}
+                           :plugins
+                           [[lein-kibit "0.1.2"]
+                            [lein-cljfmt "0.5.3"]
+                            [lein-gen "0.2.1"]
+                            [jonase/eastwood "0.2.5"]]
+                           :aliases {"slamhound" ["run" "-m" "slam.hound"]}
+                           :eastwood {:exclude-linters
+                                      [:constant-test,
+                                       :def-in-def]
+                                      :exclude-namespaces
+                                      [sicp.extra.graph.viz
+                                       sicp.extra.graph.render-all]}}
              :profiles/dev {}
              :profiles/test {}})
