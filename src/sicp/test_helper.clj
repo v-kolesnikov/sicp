@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [is]]))
 
 (defmacro assert-equal
-  [expected actual ]
+  [expected actual]
   `(assert-true (= ~expected ~actual)))
 
 (defmacro assert-true
