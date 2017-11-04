@@ -2,7 +2,6 @@ SICP
 ====
 
 [![Build Status](https://travis-ci.org/v-kolesnikov/sicp.svg?branch=master)](https://travis-ci.org/v-kolesnikov/sicp)
-[![Dependencies Status](https://jarkeeper.com/v-kolesnikov/sicp/status.svg)](https://jarkeeper.com/v-kolesnikov/sicp)
 [![Licence MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Join the chat at https://gitter.im/justCxx/sicp](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/justCxx/sicp?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
