@@ -10,7 +10,7 @@
 
 (defn beside
   [left-painter right-painter]
-  ; some thiings
+  ; some things
   (fn [frame]
     ; draw left-painter
     ; draw right-painter
