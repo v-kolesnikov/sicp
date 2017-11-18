@@ -3,4 +3,3 @@ language: clojure
 before_script:
   - lein cljfmt check
   - lein eastwood
-  - lein kibit
