@@ -1,15 +1,6 @@
-APP_HOME := '/sicp'
-TAG := v-kolesnikov/sicp
-TEST_COMMAND := lein trampoline test
-REPL_PORT := 48789
-
-include docker.mk
-
-grapviz:
-	lein run -m sicp.extra.graph.render-all
-
-format:
-	lein cljfmt fix
+.PHONY: test
+test:
+	lein test
 
 checks: check-format check-namespaces check-style
 
@@ -22,4 +13,8 @@ check-style:
 check-namespaces:
 	lein eastwood
 
-.PHONY: test
+format:
+	lein cljfmt fix
+
+grapviz:
+	lein run -m sicp.extra.graph.render-all

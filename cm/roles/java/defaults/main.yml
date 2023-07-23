@@ -1,3 +1,0 @@
-java_version: 8
-java_ppa: "ppa:webupd8team/java"
-java_package_name: "oracle-java{{ java_version }}-installer"
